@@ -36,14 +36,14 @@
     </nav>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Ultimo aggiornamento: 5 maggio 2026 · Versione 1.0</p>
+    <p class="updated">Ultimo aggiornamento: 27 maggio 2026 · Versione 1.1</p>
 
     <div class="highlight">
-      <strong>In sintesi</strong>: Drive Safe usa la tua posizione GPS per la navigazione e calcolare i pedaggi. I dati restano sul tuo dispositivo e (se accedi) su un server europeo (Supabase) per sincronizzare le tue impostazioni e segnalazioni community. Non vendiamo dati a terzi. Puoi cancellare il tuo account in qualsiasi momento.
+      <strong>In sintesi</strong>: Drive Safe usa la tua posizione GPS per la navigazione, il calcolo pedaggi e i gruppi di viaggio. I dati restano sul tuo dispositivo o (se accedi) su un server europeo (Supabase, Frankfurt). Non vendiamo dati a terzi, niente advertising, niente fingerprinting. Puoi cancellare il tuo account in qualsiasi momento dall'app.
     </div>
 
     <h2>1. Titolare del trattamento</h2>
-    <p>Il titolare del trattamento dati è <strong>Alessandro Battaglia</strong> (operante come DigitaLabs), residente in Italia. Per qualsiasi questione relativa alla privacy:</p>
+    <p>Il titolare del trattamento dati è <strong>Alessandro Battaglia</strong> (operante come DigitaLabs), residente in Italia. Contatti per richieste privacy / GDPR:</p>
     <ul>
       <li>Email: <a href="mailto:alessandro.battaglia1987@gmail.com">alessandro.battaglia1987@gmail.com</a></li>
       <li>Posta: Italia (indirizzo fornito su richiesta a fini legali)</li>
@@ -52,72 +52,104 @@
     <h2>2. Quali dati raccogliamo</h2>
     <table>
       <tr><th>Categoria</th><th>Esempio</th><th>Quando</th></tr>
-      <tr><td>Posizione GPS</td><td>Lat/lng, accuratezza, direzione</td><td>Solo a app aperta + permesso concesso</td></tr>
-      <tr><td>Account</td><td>Email, nickname, hash password</td><td>Solo se ti registri</td></tr>
-      <tr><td>Veicolo</td><td>Marca, modello, alimentazione</td><td>Quando configuri il garage</td></tr>
-      <tr><td>Segnalazioni</td><td>Buche, dossi, autovelox segnalati</td><td>Quando inserisci segnalazioni</td></tr>
-      <tr><td>Tier abbonamento</td><td>Stock / Stage 1-3</td><td>Solo se attivi un piano</td></tr>
-      <tr><td>Crash / log diagnostici</td><td>Errori app, build version</td><td>Solo se attivi il debug HUD</td></tr>
+      <tr><td>Posizione GPS</td><td>Lat/lng, accuratezza, direzione, velocità</td><td>Solo a navigazione attiva + permesso concesso</td></tr>
+      <tr><td>Account</td><td>Email, nickname, hash password (o token Apple OAuth)</td><td>Solo se ti registri</td></tr>
+      <tr><td>Garage</td><td>Marca, modello, anno, alimentazione, classe Euro, stage ECU, altezza, peso</td><td>Quando configuri il veicolo</td></tr>
+      <tr><td>Preferenze percorso</td><td>Evita pedaggi/ZTL/autovelox, soglie dossi/buche</td><td>Quando le imposti</td></tr>
+      <tr><td>Shortcuts (Casa/Lavoro)</td><td>Coordinate + etichetta</td><td>Solo se le salvi</td></tr>
+      <tr><td>Segnalazioni community</td><td>Buche, dossi, autovelox, tutor, posti di blocco</td><td>Quando inserisci una segnalazione</td></tr>
+      <tr><td>Gruppi di viaggio (convoy)</td><td>Posizione live + nickname condivisi con i membri del gruppo</td><td>Solo durante una sessione di gruppo attiva</td></tr>
+      <tr><td>Tier abbonamento</td><td>Stock / Stage 1 / 2 / 3, scadenza</td><td>Solo se attivi un piano</td></tr>
+      <tr><td>Codici promo riscattati</td><td>Codice usato + premio applicato</td><td>Solo se riscatti un codice</td></tr>
+      <tr><td>Token push notification</td><td>APNs (iOS) / FCM (Android), platform</td><td>Solo se autorizzi le notifiche push</td></tr>
+      <tr><td>Crash/log diagnostici</td><td>Stack trace, versione app, modello device (senza email/token)</td><td>Su crash o errore non-recuperabile</td></tr>
     </table>
+
+    <p><strong>Cosa NON raccogliamo MAI</strong>: targa, VIN, dati biometrici, contatti rubrica, foto, contenuto SMS/email, app installate, advertising ID, cronologia browser.</p>
 
     <h2>3. Perché li raccogliamo (basi legali)</h2>
     <ul>
-      <li><strong>Posizione GPS</strong>: indispensabile per il funzionamento del navigatore. Base legale: esecuzione del servizio (GDPR Art. 6.1.b).</li>
-      <li><strong>Account & garage</strong>: per ricordare le tue preferenze tra dispositivi. Base legale: consenso (GDPR Art. 6.1.a).</li>
-      <li><strong>Segnalazioni community</strong>: per arricchire la mappa con dati condivisi. Base legale: legittimo interesse pubblico (GDPR Art. 6.1.f).</li>
-      <li><strong>Crash log</strong>: solo per migliorare l'app. Anonimi, niente PII. Base legale: legittimo interesse.</li>
+      <li><strong>Posizione GPS, garage, percorsi</strong>: esecuzione del servizio richiesto (GDPR Art. 6.1.b).</li>
+      <li><strong>Account & shortcuts</strong>: consenso esplicito al momento della registrazione (GDPR Art. 6.1.a).</li>
+      <li><strong>Segnalazioni community</strong>: legittimo interesse pubblico (GDPR Art. 6.1.f) — i dati sono anonimi.</li>
+      <li><strong>Gruppi di viaggio (convoy)</strong>: consenso esplicito al momento di creare/entrare in un gruppo. Sai sempre quando la tua posizione è condivisa (banner "Sei in convoglio" visibile in app).</li>
+      <li><strong>Crash log</strong>: legittimo interesse a migliorare la stabilità. Context filtrato (token/email/secret rimossi automaticamente).</li>
+      <li><strong>Push notification</strong>: consenso al momento di concedere il permesso iOS/Android.</li>
     </ul>
 
     <h2>4. Come usiamo i dati</h2>
     <ul>
-      <li>Calcolare il percorso, mostrare la mappa, suggerire pedaggi</li>
-      <li>Sincronizzare il garage e le preferenze tra i tuoi dispositivi</li>
-      <li>Mostrare le segnalazioni vicine ad altri utenti (anonime)</li>
+      <li>Calcolare il percorso, mostrare la mappa, suggerire pedaggi/ZTL/autovelox</li>
+      <li>Sincronizzare garage e preferenze tra i tuoi dispositivi</li>
+      <li>Mostrare le segnalazioni community vicine (anonime)</li>
+      <li>Condividere la tua posizione live SOLO con i membri del gruppo durante una sessione convoy attiva</li>
+      <li>Inviare notifiche push relative al gruppo (membro entrato, leader cambiato, ecc.)</li>
       <li>Diagnosticare bug e crash dell'app</li>
+      <li>Erogare i contenuti del tier abbonamento</li>
     </ul>
-    <p><strong>Cosa NON facciamo</strong>: vendere dati a terzi, profilazione pubblicitaria, tracking cross-app, condivisione con broker dati.</p>
+    <p><strong>Cosa NON facciamo</strong>: vendere dati a terzi, profilazione pubblicitaria, tracking cross-app, condivisione con broker dati, retargeting, customer segmentation per advertising.</p>
 
     <h2>5. Dove sono memorizzati i dati</h2>
     <ul>
-      <li><strong>Sul tuo dispositivo</strong>: posizione, garage, preferenze (localStorage / Capacitor Preferences)</li>
-      <li><strong>Server</strong>: Supabase (database PostgreSQL ospitato in <em>Europa, Frankfurt</em>) — per sync multi-device e segnalazioni community</li>
-      <li><strong>Mapbox</strong>: solo le coordinate origine/destinazione vengono inviate per il routing. Mapbox non ha accesso al tuo account.</li>
+      <li><strong>Sul tuo dispositivo</strong>: posizione corrente, garage, preferenze, shortcuts cached, crash buffer (localStorage + Capacitor Preferences + Filesystem cifrato dove disponibile)</li>
+      <li><strong>Server Supabase</strong>: database PostgreSQL ospitato in <em>Europa, Frankfurt</em> — per sync multi-device, segnalazioni community, gruppi e codici promo. Tutte le tabelle sono protette da Row Level Security: vedi solo i tuoi dati e i dati pubblici della community.</li>
+      <li><strong>Mapbox</strong> (USA): coordinate origine/destinazione inviate per il routing. Mapbox NON ha accesso al tuo account né alle tue identità. Standard contractual clauses (SCC) UE applicate.</li>
+      <li><strong>OpenStreetMap / OpenFreeMap</strong>: tile della mappa scaricate dal device, nessun dato personale inviato.</li>
+      <li><strong>RevenueCat</strong>: gestisce gli abbonamenti In-App Purchase. Riceve l'app_user_id (UUID anonimo, non l'email) + l'event di acquisto. Vedi la <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</li>
+      <li><strong>Apple App Store / Google Play</strong>: gestiscono i pagamenti effettivi. DigitaLabs NON conserva mai dati di carta di credito.</li>
+      <li><strong>Apple Push Notification Service (APNs) / Firebase Cloud Messaging (FCM)</strong>: ricevono solo il token push del tuo device per recapitare le notifiche.</li>
+      <li><strong>WebLLM (AI assistente)</strong>: il modello AI gira <strong>interamente sul tuo dispositivo</strong>. Le tue domande NON vengono mai inviate a server remoti.</li>
     </ul>
 
     <h2>6. Trasferimento extra-UE</h2>
-    <p>Tutti i nostri server sono in UE (Frankfurt). Mapbox è un servizio statunitense ma riceve solo coordinate aggregate non identificative. Non avvengono altri trasferimenti extra-UE.</p>
+    <p>Database principale, gruppi e segnalazioni: server in UE (Frankfurt). Mapbox è negli USA ma riceve solo coordinate aggregate non identificative (Standard Contractual Clauses applicate). RevenueCat è negli USA: trattamento sotto SCC UE + GDPR addendum. Apple/Google: trattamento secondo le loro privacy policy globali (vedi Apple Legal e Google Privacy).</p>
 
     <h2>7. Conservazione</h2>
     <table>
       <tr><th>Dato</th><th>Conservazione</th></tr>
-      <tr><td>Posizione GPS</td><td>Solo in RAM, mai persistita</td></tr>
-      <tr><td>Account & garage</td><td>Finché l'account è attivo + 30 giorni dopo cancellazione</td></tr>
-      <tr><td>Segnalazioni community</td><td>30 giorni (poi auto-cancellate)</td></tr>
+      <tr><td>Posizione GPS live (navigazione)</td><td>Solo in RAM, mai persistita su server</td></tr>
+      <tr><td>Posizione gruppo (convoy)</td><td>Solo in DB durante la sessione + cleanup automatico ad ogni inattività &gt;5 min</td></tr>
+      <tr><td>Account & garage & shortcuts</td><td>Finché l'account è attivo + 30 giorni dopo cancellazione</td></tr>
+      <tr><td>Segnalazioni community</td><td>30-180 giorni a seconda del tipo, poi auto-cancellate</td></tr>
       <tr><td>Storico viaggi locale</td><td>Solo sul dispositivo (puoi cancellarlo da Profilo)</td></tr>
+      <tr><td>Crash report</td><td>90 giorni dall'ultima occorrenza, poi auto-purge</td></tr>
+      <tr><td>Codici promo riscattati</td><td>Per durata della scadenza del codice + 12 mesi audit</td></tr>
+      <tr><td>Token push</td><td>Disattivato al logout, eliminato 90 giorni dopo</td></tr>
     </table>
 
     <h2>8. I tuoi diritti (GDPR)</h2>
     <p>Hai il diritto di:</p>
     <ul>
-      <li><strong>Accesso</strong>: chiederci una copia dei tuoi dati</li>
-      <li><strong>Rettifica</strong>: correggere dati errati</li>
-      <li><strong>Cancellazione</strong>: chiedere la cancellazione (puoi farlo direttamente da Profilo → Elimina account)</li>
-      <li><strong>Portabilità</strong>: esportare i tuoi dati in formato JSON</li>
-      <li><strong>Opposizione</strong>: rifiutare il trattamento (es. disattivare condivisione segnalazioni)</li>
+      <li><strong>Accesso</strong>: chiederci una copia dei tuoi dati (artt. 15 GDPR)</li>
+      <li><strong>Rettifica</strong>: correggere dati errati (art. 16)</li>
+      <li><strong>Cancellazione</strong>: chiedere la cancellazione (art. 17) — puoi farlo direttamente da <strong>Profilo → Elimina account</strong></li>
+      <li><strong>Portabilità</strong>: esportare i tuoi dati in formato JSON (art. 20)</li>
+      <li><strong>Opposizione</strong>: rifiutare il trattamento (art. 21) — es. disattivare condivisione segnalazioni, push, posizione gruppo</li>
+      <li><strong>Limitazione</strong>: chiedere di sospendere temporaneamente il trattamento (art. 18)</li>
       <li><strong>Reclamo</strong>: rivolgerti al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante Privacy italiano</a></li>
     </ul>
+    <p>Per esercitare un diritto: scrivici all'email indicata in sezione 1. Risposta entro 30 giorni (art. 12.3 GDPR).</p>
 
-    <h2>9. Cookies & tracking</h2>
-    <p>L'app non usa cookies di terze parti. La WebView usa solo storage tecnico (sessione, preferenze). Niente Google Analytics, niente Facebook Pixel, niente fingerprinting.</p>
+    <h2>9. Sicurezza</h2>
+    <ul>
+      <li>Tutti i trasferimenti dati avvengono su <strong>HTTPS/TLS</strong>.</li>
+      <li>Le password sono <strong>hashate</strong> server-side (bcrypt via Supabase Auth) — non conosciamo mai la tua password in chiaro.</li>
+      <li>I database Supabase usano Row Level Security: ogni utente vede solo le proprie righe.</li>
+      <li>La service_role key (admin) non è mai presente nel codice del client.</li>
+      <li>Crash report sanitizzati lato client per rimuovere automaticamente token/email/secret.</li>
+    </ul>
 
-    <h2>10. Minori di 13 anni</h2>
-    <p>L'app è destinata ad un pubblico di età 13+. Se sei minore, devi avere il consenso del tutore legale per usare l'app. Non raccogliamo deliberatamente dati di minori sotto i 13 anni.</p>
+    <h2>10. Cookies & tracking</h2>
+    <p>L'app non usa cookies di terze parti. La WebView Capacitor usa solo storage tecnico (sessione, preferenze, cache token). Niente Google Analytics, niente Facebook Pixel, niente fingerprinting, niente advertising ID.</p>
 
-    <h2>11. Modifiche a questa policy</h2>
-    <p>Quando aggiorniamo questa policy, ti notifichiamo via email (se hai un account) e nell'app. La versione corrente è in alto.</p>
+    <h2>11. Minori di 16 anni</h2>
+    <p>L'app è destinata ad un pubblico di età <strong>16+</strong>, allineata con i Termini di Servizio. Per minori, il consenso del tutore legale è richiesto secondo la normativa italiana (Codice Privacy e D.Lgs. 196/2003 come modificato). Non raccogliamo deliberatamente dati di minori sotto i 16 anni; in caso di errore, contattaci per la cancellazione immediata.</p>
 
-    <h2>12. Contatti</h2>
-    <p>Per domande sulla privacy: <a href="mailto:alessandro.battaglia1987@gmail.com">alessandro.battaglia1987@gmail.com</a></p>
+    <h2>12. Modifiche a questa policy</h2>
+    <p>Quando aggiorniamo questa policy, ti notifichiamo via email (se hai un account) e in-app. La versione e data corrente sono in alto.</p>
+
+    <h2>13. Contatti</h2>
+    <p>Per domande sulla privacy, richieste GDPR, o reclami: <a href="mailto:alessandro.battaglia1987@gmail.com">alessandro.battaglia1987@gmail.com</a></p>
 
     <footer>
       © 2026 DigitaLabs — Drive Safe<br>

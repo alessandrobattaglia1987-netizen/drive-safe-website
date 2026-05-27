@@ -12,7 +12,8 @@
     .container{max-width:760px;margin:0 auto;padding:48px 24px}
     nav{text-align:center;margin-bottom:32px}
     nav a{color:#00ff9b;text-decoration:none;margin:0 18px;font-weight:500}
-    h1{font-size:36px;margin-bottom:24px;background:linear-gradient(135deg,#00ff9b 0%,#00a24f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    h1{font-size:36px;margin-bottom:8px;background:linear-gradient(135deg,#00ff9b 0%,#00a24f 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .updated{color:#6b757d;font-size:13px;margin-bottom:24px}
     h2{font-size:22px;margin:40px 0 12px;color:#00ff9b}
     h3{font-size:16px;margin:20px 0 8px;color:#e8eef2}
     p,li{color:#c5cdd3;margin-bottom:8px}
@@ -23,6 +24,11 @@
     .faq-item{background:#0e1518;border:1px solid #1f2a30;border-radius:8px;padding:16px;margin-bottom:12px}
     .faq-q{font-weight:600;color:#e8eef2;margin-bottom:6px}
     .faq-a{color:#9aa5ad;font-size:14px}
+    .tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:16px 0}
+    .tier{background:#0e1518;border:1px solid #1f2a30;border-radius:8px;padding:14px;text-align:center}
+    .tier .name{font-weight:700;color:#00ff9b;font-size:15px}
+    .tier .price{font-size:18px;font-weight:600;color:#e8eef2;margin:6px 0}
+    .tier .desc{font-size:12px;color:#9aa5ad}
     footer{text-align:center;padding:48px 0 16px;color:#6b757d;font-size:13px;border-top:1px solid #1f2a30;margin-top:40px}
     @media (max-width:640px){h1{font-size:28px}.container{padding:24px 16px}}
   </style>
@@ -36,63 +42,148 @@
     </nav>
 
     <h1>Supporto Drive Safe</h1>
-    <p>Hai un problema, una segnalazione o un suggerimento? Siamo qui per aiutarti.</p>
+    <p class="updated">Ultimo aggiornamento: 27 maggio 2026</p>
+    <p>Hai un problema, una segnalazione, un suggerimento o vuoi recuperare l'accesso? Siamo qui per aiutarti.</p>
 
     <div class="contact-box">
       <h2 style="margin-top:0">📧 Email diretta</h2>
-      <p>Scrivi una email e ti risponderemo entro 48 ore lavorative:</p>
+      <p>Scrivi una email e ti risponderemo entro <strong>48 ore lavorative</strong>:</p>
       <a class="email" href="mailto:alessandro.battaglia1987@gmail.com?subject=Drive%20Safe%20-%20Supporto">alessandro.battaglia1987@gmail.com</a>
-      <p style="font-size:13px;color:#6b757d;margin-top:12px">Quando scrivi, includi: <strong>versione app</strong> (visibile in Profilo → in basso a destra), <strong>modello del telefono</strong> e <strong>versione iOS/Android</strong>. Aiuta a diagnosticare più rapido.</p>
+      <p style="font-size:13px;color:#6b757d;margin-top:12px">Quando scrivi, includi: <strong>versione app</strong> (visibile in Profilo → menu in basso), <strong>modello del telefono</strong>, <strong>versione iOS/Android</strong>. Allega screenshot/video se possibile. Aiuta a diagnosticare più rapido.</p>
     </div>
+
+    <h2>Piani di abbonamento</h2>
+    <p>Drive Safe è gratuita nella versione base. Funzionalità avanzate sono distribuite in tre tier a pagamento. Prezzi indicativi: i prezzi effettivi sono mostrati nell'app in base al tuo Paese (gestiti da Apple App Store / Google Play).</p>
+    <div class="tier-grid">
+      <div class="tier"><div class="name">Stock</div><div class="price">Gratis</div><div class="desc">Mappa, ricerca, navigazione base</div></div>
+      <div class="tier"><div class="name">Stage 1</div><div class="price">~€4.99/m</div><div class="desc">+ Autovelox, classi pedaggio A/B</div></div>
+      <div class="tier"><div class="name">Stage 2</div><div class="price">~€7.99/m</div><div class="desc">+ Tutor, pedaggi 3/4/5, rimorchi, AI</div></div>
+      <div class="tier"><div class="name">Stage 3</div><div class="price">~€9.99/m</div><div class="desc">Tutto incluso + Convoy gruppi, CarPlay</div></div>
+    </div>
+    <p>Abbonamenti rinnovo automatico: gestiscili da Impostazioni → ID Apple/Google → Abbonamenti. Disponibile anche tariffa annuale (~20% di sconto).</p>
 
     <h2>Domande frequenti</h2>
 
+    <h3 style="margin-top:24px">Posizione e mappa</h3>
     <div class="faq-item">
-      <div class="faq-q">L'app non mi rileva la posizione</div>
-      <div class="faq-a">Verifica i permessi: Impostazioni iOS → Privacy → Servizi di localizzazione → Drive Safe → "Mentre uso l'app" o "Sempre". Su Android: Impostazioni → App → Drive Safe → Autorizzazioni → Posizione → "Consenti sempre".</div>
+      <div class="faq-q">L'app non rileva la mia posizione</div>
+      <div class="faq-a">Verifica i permessi: <strong>iOS</strong> → Impostazioni → Privacy → Servizi di localizzazione → Drive Safe → "Sempre" (necessario per la navigazione anche in background). <strong>Android</strong> → Impostazioni → App → Drive Safe → Autorizzazioni → Posizione → "Consenti sempre". Se il problema persiste, riavvia il telefono e verifica che GPS sia attivo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">In galleria o sottopassi non funziona</div>
+      <div class="faq-a">Normale: il GPS non riceve segnale satellitare in tunnel. L'app mantiene il pin congelato sulla strada per pochi secondi, poi si aggancia di nuovo all'uscita.</div>
     </div>
 
+    <h3>Pedaggi e ZTL</h3>
     <div class="faq-item">
       <div class="faq-q">Il calcolo del pedaggio è sbagliato</div>
-      <div class="faq-a">I caselli sono allineati a OpenStreetMap (377 verificati). Se trovi una discrepanza, mandaci una mail con: l'autostrada, i due caselli (entrata-uscita) e la cifra che ti aspetti vs quella mostrata. Aggiorneremo il database al prossimo build.</div>
+      <div class="faq-a">I caselli sono allineati a fonte ufficiale ASPI + OpenStreetMap. La classe veicolo (A/B/3/4/5) è derivata dal garage configurato — verifica che altezza e numero di assi siano corretti in <strong>Garage</strong>. Se trovi una discrepanza reale, mandaci una mail con: autostrada, casello entrata, casello uscita, classe veicolo, cifra mostrata vs cifra attesa.</div>
     </div>
-
     <div class="faq-item">
-      <div class="faq-q">Non vedo la mia auto elettrica nell'elenco</div>
-      <div class="faq-a">Drive Safe v6.0 supporta 50+ brand EV/ibridi: MG, Tesla, Polestar, Leapmotor, Xpeng, NIO, Zeekr, Maxus, Lucid, Vinfast, Skywell, BYD, ecc. Se manca il tuo modello, scrivici la marca + modello esatto e lo aggiungiamo.</div>
+      <div class="faq-q">Mi avvisa di ZTL anche se sono fuori</div>
+      <div class="faq-a">Le zone ZTL sono poligoni georeferenziati con orari attivi specifici. L'avviso scatta se passi nel poligono durante l'orario attivo. Se ricevi falsi positivi, controlla che il garage sia compilato (classe Euro, alimentazione): alcune ZTL hanno deroghe per veicoli puliti. Se hai veicolo elettrico/ibrido/Euro 6, sei spesso esente — verifica la voce "categoria" nel garage.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Posso disattivare gli avvisi ZTL?</div>
+      <div class="faq-a">Sì: Profilo → Preferenze percorso → "Evita ZTL non autorizzate" → disattiva.</div>
     </div>
 
+    <h3>Garage e veicolo</h3>
+    <div class="faq-item">
+      <div class="faq-q">Non vedo la mia auto nell'elenco</div>
+      <div class="faq-a">Supportiamo 50+ marche tra auto tradizionali, elettriche, ibride (Tesla, BYD, Polestar, MG, Leapmotor, Xpeng, NIO, Zeekr, Maxus, Lucid, Vinfast, Skywell e tutti i marchi italiani/europei/asiatici principali). Se manca il tuo modello, scrivici marca + modello esatto + anno e lo aggiungiamo al prossimo build.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Posso configurare moto o camper?</div>
+      <div class="faq-a">Sì. In Garage trovi i tab <strong>Auto / Moto / Camper</strong>. Per i camper >12t o 3+ assi (classe pedaggio 3/4/5) serve abbonamento Stage 2+.</div>
+    </div>
+
+    <h3>Segnalazioni community</h3>
     <div class="faq-item">
       <div class="faq-q">Le segnalazioni community sono accurate?</div>
-      <div class="faq-a">Le segnalazioni vengono votate dagli altri utenti (👍/👎). Una segnalazione "trusted" ha 50+ voti positivi e meno del 10% di negativi. Le altre sono mostrate ma con peso inferiore. Le segnalazioni vecchie scadono automaticamente.</div>
+      <div class="faq-a">Le segnalazioni vengono votate dagli altri utenti (👍/👎). Quelle con molti voti positivi hanno priorità di visualizzazione. Le segnalazioni vecchie scadono automaticamente (24h-180gg in base al tipo). Puoi votarle quando le incontri per migliorare la qualità del database.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Posso segnalare un autovelox/tutor?</div>
+      <div class="faq-a">Sì, dal tasto + sulla mappa. Tier Stage 1+ richiesto per visualizzare/segnalare autovelox, Stage 2+ per i tutor.</div>
     </div>
 
+    <h3>Gruppi di viaggio (Convoy)</h3>
     <div class="faq-item">
-      <div class="faq-q">Quanto costa l'app?</div>
-      <div class="faq-a">L'app base è gratuita. Funzionalità avanzate (Stage 1, 2, 3) sono via abbonamento mensile o annuale. Il primo tier costa €4.99/mese. Cancellabile in qualsiasi momento dalle impostazioni del tuo account.</div>
+      <div class="faq-q">Cos'è un gruppo di viaggio?</div>
+      <div class="faq-a">Una sessione condivisa dove tu e altri utenti vedete in tempo reale le posizioni reciproche durante un viaggio (es. partenza in convoglio per le vacanze). Disponibile su Stage 3.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Come creo o entro in un gruppo?</div>
+      <div class="faq-a">Percorso → Viaggia in gruppo → Crea (genera un codice 6 caratteri da condividere) o Entra (inserisci il codice ricevuto). Max 64 membri per gruppo. Solo il leader può impostare la destinazione.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">La mia posizione è visibile sempre?</div>
+      <div class="faq-a">No. La posizione live è condivisa SOLO con i membri del gruppo attivo, SOLO durante la sessione, e SOLO se l'app è aperta o in navigazione. Il banner "Sei in convoglio" è sempre visibile per ricordartelo.</div>
     </div>
 
+    <h3>Codici promo</h3>
     <div class="faq-item">
-      <div class="faq-q">Android Auto / CarPlay non funzionano</div>
-      <div class="faq-a">Android Auto: l'app deve essere v5.5+ e l'auto deve essere già accoppiata. Se Drive Safe non appare nel launcher dell'auto, riavvia il telefono e ricollega via USB. CarPlay: in fase di approvazione Apple, sarà disponibile dopo verifica entitlement.</div>
+      <div class="faq-q">Ho un codice promo, come lo riscatto?</div>
+      <div class="faq-a">Profilo → "Riscatta codice promo" → digita il codice → conferma. Il bonus viene applicato immediatamente e la scadenza del tuo abbonamento si estende (o si attiva un nuovo periodo).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Codice non funziona / "già riscattato"</div>
+      <div class="faq-a">Ogni codice è usabile una sola volta per utente. Verifica di averlo scritto esattamente come ricevuto (sensibile al trattino). Se è scaduto, contattaci.</div>
     </div>
 
+    <h3>Account e dati</h3>
     <div class="faq-item">
-      <div class="faq-q">Ho perso l'accesso al mio account</div>
-      <div class="faq-a">Se hai effettuato login con Google, riprova dallo stesso account Google. Se l'account è stato creato con email/password, contattaci per il reset. La sessione locale è persistente ma se cambi telefono devi accedere di nuovo per recuperare il garage e i dati salvati.</div>
+      <div class="faq-q">Come accedo all'app?</div>
+      <div class="faq-a">Due metodi: <strong>Email + password</strong> oppure <strong>Sign in with Apple</strong>. Su Android è disponibile solo email/password (Apple ID è feature iOS).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Ho dimenticato la password</div>
+      <div class="faq-a">Dalla schermata di login → "Hai dimenticato la password?" → inserisci l'email. Riceverai un link di reset entro pochi minuti. Controlla anche la cartella spam e verifica di aver scritto l'email correttamente.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Come cancello il mio account?</div>
+      <div class="faq-a">Profilo → Elimina account. L'operazione è <strong>irreversibile</strong> e cancella tutti i tuoi dati personali (profilo, garage, shortcuts, gruppi). NB: l'abbonamento Apple/Google non si interrompe automaticamente — disattivalo separatamente dalle Impostazioni del tuo App Store.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Cambio telefono, come recupero i dati?</div>
+      <div class="faq-a">Installa l'app sul nuovo dispositivo, accedi con lo stesso account (email/password o Apple ID): garage, shortcuts e preferenze si sincronizzano automaticamente. Le impostazioni locali (recenti, layer mappa) sono per device.</div>
+    </div>
+
+    <h3>AI assistente</h3>
+    <div class="faq-item">
+      <div class="faq-q">Come funziona l'AI dell'app?</div>
+      <div class="faq-a">L'AI assistente (Stage 2+) gira <strong>interamente sul tuo dispositivo</strong>: WebLLM scarica un modello compatto al primo uso (~600MB-1.5GB). Le tue domande NON vengono mai inviate a server remoti. Niente OpenAI, niente cloud, niente data leak.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Il download AI è lento o blocca l'app</div>
+      <div class="faq-a">Il modello viene scaricato una sola volta (poi è cached). Su connessione lenta può richiedere 5-15 min. Se l'app sembra bloccata, lasciala aperta in primo piano con telefono attivo finché non finisce. Su iPhone con meno di 4GB di RAM libera puoi avere errori OOM: chiudi altre app in background.</div>
+    </div>
+
+    <h3>Android Auto / CarPlay</h3>
+    <div class="faq-item">
+      <div class="faq-q">Android Auto non vede l'app</div>
+      <div class="faq-a">L'app deve essere installata + l'auto deve essere già accoppiata col telefono. Se Drive Safe non appare nel launcher dell'auto, riavvia il telefono e ricollega via USB. Verifica che "App per la guida" sia abilitata nelle Impostazioni Android Auto.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">CarPlay è disponibile?</div>
+      <div class="faq-a">Il supporto CarPlay è in fase di completamento (infrastruttura nativa già presente, attivazione finale dipendente da Apple Review). Se sei interessato a fare beta tester, contattaci.</div>
     </div>
 
     <h2>Segnala un bug</h2>
     <p>Se l'app crasha o si comporta in modo anomalo:</p>
     <ul>
       <li>Riproduci il problema (se possibile) e prendi nota dei passi</li>
-      <li>Su Android: <strong>scuoti il telefono</strong> in Drive Safe per aprire il bug report integrato (in arrivo v6.1)</li>
       <li>Mandaci una email con descrizione + screenshot/video</li>
-      <li>Includi versione app, modello e OS</li>
+      <li>Includi versione app (in Profilo), modello e OS</li>
+      <li>I crash gravi vengono raccolti automaticamente in forma anonima per la diagnostica (vedi <a href="./privacy.html">Privacy</a>)</li>
     </ul>
 
     <h2>Privacy & dati</h2>
-    <p>I tuoi dati sono protetti. Vedi la <a href="./privacy.html">Privacy Policy</a> per dettagli su cosa raccogliamo e come.</p>
+    <p>I tuoi dati sono protetti. Vedi la <a href="./privacy.html">Privacy Policy</a> per dettagli su cosa raccogliamo, dove sono memorizzati e come esercitare i tuoi diritti GDPR.</p>
+
+    <h2>Termini di servizio</h2>
+    <p>L'uso dell'app è regolato dai <a href="./terms.html">Termini di Servizio</a>. Leggili prima di sottoscrivere un abbonamento.</p>
 
     <footer>
       © 2026 DigitaLabs — Drive Safe<br>
